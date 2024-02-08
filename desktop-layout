@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2024-02-08T13:17:25.723Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="Ub0I2maWZynPUPUdVl2L" version="23.1.2" type="device">
+  <diagram name="Page-1" id="eyGZLfXji9l0chG_6X6G">
+    <mxGraphModel dx="1050" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PgQMBU8RFiu1yaH1JF-C-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="121" y="40" width="480" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="PgQMBU8RFiu1yaH1JF-C-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="162" y="80" width="390" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PgQMBU8RFiu1yaH1JF-C-3" value="Check" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#666666;align=center;strokeColor=#4D4D4D;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="302.25" y="220" width="105.5" height="16.88" as="geometry" />
+        </mxCell>
+        <mxCell id="PgQMBU8RFiu1yaH1JF-C-6" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.misc.progressBar;fillColor=#cccccc;strokeColor=none;fillColor2=#99ddff;barPos=45;" vertex="1" parent="1">
+          <mxGeometry x="255" y="260" width="235" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PgQMBU8RFiu1yaH1JF-C-7" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.misc.progressBar;fillColor=#fff2cc;strokeColor=#d6b656;fillColor2=#FF6D2E;barPos=55;" vertex="1" parent="1">
+          <mxGeometry x="255" y="290" width="235" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PgQMBU8RFiu1yaH1JF-C-8" value="Spam emas 45%" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="322" y="265" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PgQMBU8RFiu1yaH1JF-C-9" value="Spam 55%" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="295" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
