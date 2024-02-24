@@ -1,5 +1,5 @@
 import sys
-import pickle
+import dill as pickle
 from PyQt5.QtWidgets import QApplication, QWidget, \
     QTextEdit, QPushButton, QVBoxLayout, QProgressBar
 from PyQt5.QtCore import Qt

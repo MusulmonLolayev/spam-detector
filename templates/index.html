@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam detector dasturi</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2" ></script>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div id="app">
+        <div>
+          <h2>Enter your opinion</h2>
+          <textarea id="w3review" name="w3review" rows="10" cols="50" v-model="inputText" ></textarea>
+        </div>
+        <br>
+        <div>
+          <button @click="submitText">Submit</button>
+        </div>
+      
+        <div>
+          <div class="w3-container">
+      
+            <p style="width: 500px;"></p>
+            <div v-text="non_spam_text"></div>
+            <div class="w3-border">
+              <div class="w3-grey" :style="non_spam"></div>
+            </div>
+            
+            <br>
+            <div v-text="spam_text"></div>
+            <div class="w3-border">
+              <div class="w3-grey" :style="spam"></div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            inputText: '',
+            non_spam: {
+              height: '30px',
+              width: '0px',
+              'background-color': 'green'},
+            spam: {
+              height: '30px',
+              width: '0px',
+              'background-color': 'red'},
+            non_spam_text: 'Non Spam',
+            spam_text: 'Spam',
+          },
+          methods: {
+            async submitText() {
+              try {
+                // http://127.0.0.1:8000/
+                // Replace with the actual endpoint of your server
+                const serverUrl = location.protocol + '//' + location.host + '/detect?text=' + this.inputText;
+        
+                // Send the entered text to the server
+                const response = await fetch(serverUrl, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                });
+        
+                // Parse the response JSON
+                const result = await response.json();
+                // Update colors based on the server response
+                non_spam = result.non_spam;
+                spam = result.spam;
+                
+                this.non_spam.width = 5 * non_spam + 'px'
+                this.spam.width = 5 * spam + 'px'
+        
+                this.non_spam_text = 'Non spam with ' + Math.round(non_spam, 2) + '%' 
+                this.spam_text = 'Spam with ' + Math.round(spam, 2) + '%' 
+        
+              } catch (error) {
+                console.error('Error:', error);
+              }
+            },
+          },
+        });
+        </script>
+
+      <style>
+        #app {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 50px;
+        }
+      
+        .block {
+          width: 100px;
+          height: 100px;
+          margin-top: 10px;
+        }
+      </style>
+</body>
+</html>

@@ -1,6 +1,6 @@
 from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
-import pickle
+import dill
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -28,11 +28,11 @@ class SpamDetector:
     
     def save(self, file_name="spam-det-model"):
         with open(f"{file_name}.pkl", 'wb') as f:
-            pickle.dump(self, f, protocol=pickle.HIGHEST_PROTOCOL)
+            dill.dump(self, f)
     
     def load(file_name="spam-det-model"):
         with open(f'{file_name}.pkl', 'rb') as f:
-            model = pickle.load(f)
+            model = dill.load(f)
             return model
         
 def __train_spam_detector_model():
